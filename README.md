@@ -1,77 +1,73 @@
-![](https://img.shields.io/badge/Uneweb-blue)
+# Contact Form PHP
 
-# Project Name
+Proyecto de David Costa para desarrollar un formulario de contacto con HTML, CSS y PHP.
 
-> One paragraph statement about the project.
+## Estado actual
 
-![screenshot](./app_screenshot.png)
+El repositorio contiene la estructura inicial de una página web. `index.html` incluye los metadatos de la página, enlaza la hoja de estilos y carga un icono de Font Awesome mediante CDN. `style.css` todavía está vacío.
 
-Additional description about the project and its features.
+**El formulario y el procesamiento en PHP aún no están implementados. Actualmente no se pueden enviar mensajes.**
 
-## Built With
+## Tecnologías
 
-- Major languages
-- Frameworks
-- Technologies used
+- HTML5 para la estructura de la página.
+- CSS para los estilos, pendiente de implementación.
+- Font Awesome 5.15.3 para el icono, cargado desde cdnjs.
+- PHP previsto para procesar el formulario; todavía no hay archivos PHP.
 
-## Live Demo
+## Ejecutar la página
 
-[Live Demo Link](https://livedemo.com)
+### Requisitos
 
+- Git para clonar el repositorio, o descargarlo desde GitHub con **Code → Download ZIP**.
+- Un navegador web.
+- Acceso a Internet para cargar el icono de Font Awesome desde el CDN.
 
-## Getting Started
+### Instalación
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
+```sh
+git clone https://github.com/davidcostacv/Contact-Form-PHP.git
+cd Contact-Form-PHP
+```
 
+Abre `index.html` en el navegador. En esta versión únicamente se muestra un icono; no se necesita instalar paquetes, configurar una base de datos ni ejecutar PHP.
 
-To get a local copy up and running follow these simple example steps.
+## Estructura
 
-### Prerequisites
+```text
+Contact-Form-PHP/
+├── index.html          # Página inicial
+├── style.css           # Hoja de estilos vacía
+├── app_screenshot.png  # Imagen de plantilla heredada
+├── LICENSE             # Licencia Apache 2.0
+└── README.md           # Documentación del proyecto
+```
 
-### Setup
+La imagen `app_screenshot.png` es una plantilla gráfica y no representa la interfaz actual; por eso no se presenta como captura de la aplicación.
 
-### Install
+## Próximos pasos
 
-### Usage
+- Crear los campos de nombre, correo electrónico, asunto y mensaje.
+- Añadir estilos adaptables a pantallas móviles y de escritorio.
+- Implementar validación en el servidor y procesamiento del formulario en PHP.
+- Configurar el envío de correo y mostrar resultados de éxito o error.
+- Incorporar protección CSRF, medidas antispam y pruebas del procesamiento.
+- Añadir una captura real cuando la interfaz esté terminada.
 
-### Run tests
+## Pruebas y publicación
 
-### Deployment
+El repositorio todavía no incluye pruebas automatizadas ni una demo publicada. Para verificar la página inicial, abre `index.html` y comprueba que el icono se carga y que el navegador no informa de recursos faltantes.
 
+GitHub Pages puede servir la página HTML estática. Cuando se implemente el procesamiento PHP, será necesario un servidor compatible con PHP para ejecutar esa parte; GitHub Pages no ejecuta PHP.
 
+## Contribuir
 
-## Authors
+Puedes proponer mejoras en la [página de issues](https://github.com/davidcostacv/Contact-Form-PHP/issues) o enviar un pull request. Describe el problema, los cambios realizados y cómo verificarlos.
 
-👤 **David Costa**
+## Autor
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/linkedinhandle)
+**David Costa** · [@davidcostacv](https://github.com/davidcostacv)
 
+## Licencia
 
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/linkedinhandle)
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome!
-
-Feel free to check the [issues page](issues/).
-
-## Show your support
-
-Give a ⭐️ if you like this project!
-
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
-
-## 📝 License
-
-This project is [CC0 1.0 Universal](LICENSE) licensed.
+Este proyecto utiliza la licencia [Apache 2.0](LICENSE).
