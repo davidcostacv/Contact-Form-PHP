@@ -3,6 +3,7 @@ import http.cookiejar
 import os
 from pathlib import Path
 import re
+import shlex
 import shutil
 import socket
 import subprocess
@@ -35,6 +36,9 @@ class ContactHTTP(unittest.TestCase):
         sendmail = f'"{php}" "{cls.fixture / "capture_mail.php"}"'
         if os.name == 'nt':
             sendmail = f'"{sendmail}"'  # cmd.exe preserves both quoted paths.
+        else:
+            # -d values use PHP's INI parser: quote the whole command so spaces survive.
+            sendmail = '"' + shlex.join([php, str(cls.fixture / 'capture_mail.php')]) + '"'
         with socket.socket() as sock:
             sock.bind(('127.0.0.1', 0))
             port = sock.getsockname()[1]
